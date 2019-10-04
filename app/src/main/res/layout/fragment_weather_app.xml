@@ -1,0 +1,120 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WeatherApp">
+
+<!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:id="@+id/Relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/weather_layout"
+        tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <EditText
+            android:id="@+id/edttxt_searchcity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter city name"
+            android:singleLine="true"
+            android:textColor="#1987DD"
+            android:textColorHint="#1987DD"
+            android:background="@drawable/input_field"
+            android:textSize="20dp"
+            android:imeOptions="actionSend"/>
+
+        <ImageButton
+            android:id="@+id/btn_search_city"
+            android:layout_width="56dp"
+            android:layout_height="35dp"
+            android:layout_alignStart="@+id/edttxt_searchcity"
+            android:layout_alignLeft="@+id/edttxt_searchcity"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="253dp"
+            android:layout_marginLeft="253dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#00ffffff"
+            android:src="@drawable/search" />
+
+        <ImageButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@+id/edttxt_searchcity"
+            android:layout_alignRight="@+id/btn_search_city"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginRight="9dp"
+            android:background="#00ffffff"
+            android:src="@drawable/cancelbuttonb" />
+
+    </RelativeLayout>
+
+        <TextView
+            android:id="@+id/weather_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffff"
+            android:textSize="90sp" />
+
+        <TextView
+            android:id="@+id/txt_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weather_icon"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/txt_humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_temp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/txt_pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_humidity"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+        <ProgressBar
+            android:id="@+id/loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/details_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/weather_icon"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ffffff"
+            android:textSize="30dp" />
+
+    </RelativeLayout>
+
+</FrameLayout>
